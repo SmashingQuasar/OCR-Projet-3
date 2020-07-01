@@ -34,12 +34,12 @@ main {
     margin: auto;
 }
 
-.bloc_menus {
+.container_menus {
     padding-top: 25px;
     padding-bottom: 25px;
 }
 
-.menus {
+.liste_menus {
     display: flex;
     width: 1000px;
     flex-direction: row;
@@ -56,23 +56,11 @@ main {
     box-shadow: 1px 1px 20px #BDC3C7;
 }
 
-.name {
-    margin: auto;
-    text-align: center;
-}
-
-.name h3 {
-    font-size: 3rem;
-    margin: 20px auto;
-}
-
-
-
-        /* Les Menus de la page index */
-
+    /* Fonts et boutons des menus de la page index */
+/* fonts */
 
 .special_font {
-    font-family: 'Kalam', cursive;
+    font-family: 'Kalam', cursive; /* font par défaut, remplacée si différente */
 }
 
 #lanoteenchantee {
@@ -81,6 +69,9 @@ main {
 }
 #lanoteenchantee i {
     font-size: 3rem;
+    background: -webkit-linear-gradient(160deg, #ffa366, #ff3333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -88,8 +79,18 @@ main {
     background-color: #FFF3F7;
     font-family: 'Libre Baskerville', serif;
 }
+
+#lechicalafrancaise h2 {
+    background: -webkit-linear-gradient(100deg, #9966ff, #e67300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
 #lechicalafrancaise .special_font {
     font-family: 'Libre Baskerville', serif;
+    color: #e67300;
 }
 
 
@@ -97,11 +98,77 @@ main {
     background-color: #FAFAFA;
     font-family: 'Dancing Script', cursive;
 }
+#ledelicedespapilles h2 {
+    background: -webkit-linear-gradient(150deg, #66b3ff, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#ledelicedespapilles .special_font {
+    color: #3399ff;
+}
+
+
+
 
 #lapalettedugout {
     background-color: #F7FFFA;
     font-family: 'Kalam', cursive;
 }
+
+#lapalettedugout .special_font {
+    color: #00b300;
+}
+
+#lapalettedugout h2 {
+    background: -webkit-linear-gradient(150deg, #ddffcc, #008000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* boutons du menu */
+
+/* Note concernant les boutons : le PDF donnant les instructions ne précise pas si le fondu (opacity) s'applique au texte, à la background color du parent, ou aux deux. */
+/* Comme la phrase parle juste de "zoom avec fondu" j'ai ici appliqué le fondu à tout le bouton sur le menu, cependant, il est tout à fait possible de changer cela */
+/* Pour l'appliquer uniquement au parent, il faut créer un enfant adjacent de la même taille que le parent, lui donner à lui une background color, et le modifier si besoin est avec les propriétés affectant les enfants voisins, vu qu'on ne peut pas modifier un parent avec du :hover (CSS veut bien dire "cascading"... il faut donc gruger, car on ne peut pas remonter) */
+/* Pour ne l'appliquer qu'au texte, il suffit de changer la valeur d'opacity du texte. Simple. */
+/* Notez qu'on peut aussi faire des tas de magouilles avec SASS et/ou du JS pour créer des boutons invisibles superposés qui échangent de position sur l'axe Z avec un fondu, mais le projet ne demande d'utiliser que du CSS, et malgré des heures de recherche, je n'ai pas trouvé comment effectuer lesdites magouilles sans avoir le droit d'utiliser SASS ou du Javascript... */
+/* Je suis donc désolé pour l'optimisation des animations et les temps de chargement, mais je ne vois pas comment faire sans SASS ni JS. */
+/* ... Et pour être très franc je trouve le fait de faire un fondu sur des couleurs déjà très claires d'une profonde s******** dans tous les cas o_O on voit que dal ! */ 
+
+.btn {
+    margin: auto;
+    text-align: center;
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: 400ms;
+}
+
+.btn h3 {
+    font-size: 3rem;
+    margin: 20px auto;
+}
+
+
+.menu {
+    cursor: pointer;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 400ms;
+}    
+
+.menu:hover {
+    opacity: 0.8;
+}
+.menu:hover .btn{
+    transform: scale(1.15);
+}
+
+
+
+
+
+    /* Prochainement */
 
 .comingsoon {
     display: flex;
@@ -111,6 +178,7 @@ main {
     margin-bottom: 60px;
     background-color: #1D9977;
     border-radius: 20px;
+    text-align: center;
 }
 
 .comingsoon p {
@@ -118,6 +186,15 @@ main {
     color: #F3D410;
     margin: auto;
 }
+.points {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #F3D410;
+    margin: auto;
+}
+
+
+    /* Footer */
 
 footer {
     display: flex;
@@ -136,3 +213,8 @@ footer {
     padding-left: 30px;
     padding-right: 30px;
 }
+a {
+    color: #F3D410;
+    text-decoration: none;
+}
+
