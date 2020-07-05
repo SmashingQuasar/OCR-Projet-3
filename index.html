@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/> -->
+
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+
 
 
     <title>OhMyFood Paris</title>
@@ -21,22 +24,22 @@
     <meta property="og:title" content="OhMyFood Paris" />
     <meta property="og:type" content="Menus de restaurants" />
     <meta property="og:url" content="http://www.ohmyfood.com/" /> <!-- a voir plus tard -->
-    <meta property="og:description"
-        content="OhMyFood Paris vous présente les menus des meilleurs restaurants de Paris" />
-
+    <meta property="og:description" content="OhMyFood Paris vous présente les menus des meilleurs restaurants de Paris" />
 </head>
 
 <body>
 
-    <main>
-        <header> 
-            <div class="banner">
-                <h1>OhMyFood</h1>
-            </div>
-        </header>
 
-        <div class="container_menus">
-            <div class="liste_menus">
+    <header> 
+        <div class="banner">
+            <h1>OhMyFood</h1>
+        </div>
+    </header>
+    
+    <main>
+
+        <div class="liste_menus">
+            <a href="./menus/menu_lanoteenchantee.html"> 
                 <div class="menu" id="lanoteenchantee">
                     <div class="btn">
                         <i class="fas fa-music"></i>
@@ -45,33 +48,33 @@
                         <div class="btn__bg"></div>
                     </div>
                 </div>
+            </a>
 
-                <div class="menu" id="lechicalafrancaise">
-                    <div class="btn">
-                        <h2>Le chic à la française</h2>
-                        <h3 class="special_font">Menu</h3>
-                        <div class="btn__bg"></div>
-                    </div>
+            <div class="menu" id="lechicalafrancaise">
+                <div class="btn">
+                    <h2>Le chic à la française</h2>
+                    <h3 class="special_font">Menu</h3>
+                    <div class="btn__bg"></div>
                 </div>
+            </div>
 
-                <div class="menu" id="ledelicedespapilles">
-                    <div class="btn">
-                        <h2>Le délice des papilles</h2>
-                        <h3 class="special_font">Menu</h3>
-                    </div>
+            <div class="menu" id="ledelicedespapilles">
+                <div class="btn">
+                    <h2>Le délice des papilles</h2>
+                    <h3 class="special_font">Menu</h3>
                 </div>
+            </div>
 
-                <div class="menu" id="lapalettedugout">
-                    <div class="btn">
-                        <h2>La palette du goût</h2>
-                        <h3 class="special_font">Menu</h3>
-                    </div>
+            <div class="menu" id="lapalettedugout">
+                <div class="btn">
+                    <h2>La palette du goût</h2>
+                    <h3 class="special_font">Menu</h3>
                 </div>
             </div>
         </div>
 
         <div class="comingsoon">
-            <p>Prochainement <span class="points">...</span></p>
+            <p>Prochainement <span class="points_animated"><span>.</span><span>.</span><span>.</span></span></p>
         </div>
 
     </main>
@@ -79,13 +82,10 @@
 
 
     <footer>
-        <div class="liens_utiles" id="mentionslegales">
-            <p><a href="https://c-marketing.eu/copyright-droit-auteur-web/">Mentions Légales</a></p>
-        </div>
-
-        <div class="liens_utiles" id="contact">
-            <p><a href="mailto:mon.email@mail.com">Contactez-nous</a></p>
-        </div>
+        <div class="footer_container">    
+            <a class="liens_utiles animate__animated animate__shakeX" href="https://c-marketing.eu/copyright-droit-auteur-web/">Mentions Légales</a>
+            <a class="liens_utiles animate__animated animate__shakeX" href="mailto:mon.email@mail.com">Contactez-nous</a>
+        </div> 
     </footer>
 
 </body>

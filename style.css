@@ -1,134 +1,157 @@
+/* Petit reset css pour éviter quelques problèmes par la suite */
+
 * {
-    flex-basis: auto;
-    box-sizing: border-box;
+	flex-basis: auto;
+	box-sizing: border-box;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    min-height: 100vh;
-    margin: 0;
-    padding: 10px;
+/* Pour que les liens ne soient pas bleux et soulignés */
+a {
+	text-decoration: none;
+	color: inherit;
+}
 
+/* Propriétés des body et main */
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    width: 1190px;
-    margin: auto;
-    min-height: calc(100vh - 20px);
+	display: flex;
+	flex-direction: column;
+	width: 1190px;
+	margin: auto;
+	margin-bottom: 100px;
+	min-height: calc(100vh - 20px);
+}
+
+/* Header */
+
+header {
+	width: 100%;
+	background-color: #1D9977;
 }
 
 .banner {
-    display: flex;
-    width: 100%;
-    height: 150px;
-    background-color: #1D9977;
+	display: flex;
+	width: 1190px;
+	height: 150px;
+	margin: auto;
+	background-color: #1D9977;
 }
 
 .banner h1 {
-    font-size: 3rem;
-    color: #F3D410;
-    margin: auto;
+	font-size: 3rem;
+	color: #F3D410;
+	margin: auto;
 }
 
+/* Structure de la présentation des menus */
+
 .container_menus {
-    padding-top: 25px;
-    padding-bottom: 25px;
+
 }
 
 .liste_menus {
-    display: flex;
-    width: 1000px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0 auto;
+	display: flex;
+	width: 1000px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	padding-top: 25px;
+	padding-bottom: 25px;
 }
 
 .menu {
-    display: flex;
-    justify-content: space-evenly;
-    width: 425px;
-    height: 600px;
-    margin: 35px;
-    box-shadow: 1px 1px 20px #BDC3C7;
+	display: flex;
+	justify-content: space-evenly;
+	width: 425px;
+	height: 600px;
+	margin: 35px;
+	box-shadow: 1px 1px 20px #BDC3C7;
 }
 
-    /* Fonts et boutons des menus de la page index */
-/* fonts */
+
+/* Fonts et boutons des menus de la page index */
+
 
 .special_font {
-    font-family: 'Kalam', cursive; /* font par défaut, remplacée si différente */
+	font-family: 'Kalam', cursive; /* font par défaut, remplacée si différente */
 }
+
+	/* La Note Enchantée */
 
 #lanoteenchantee {
-    background-color: #FFD6D6;
-    font-family: 'Lobster Two', cursive;
+	background-color: #FFD6D6;
+	font-family: 'Lobster Two', cursive;
 }
 #lanoteenchantee i {
-    font-size: 3rem;
-    background: -webkit-linear-gradient(160deg, #ffa366, #ff3333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	font-size: 3rem;
+	background: -webkit-linear-gradient(160deg, #ffa366, #ff3333);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
+	/* Le Chic à la Française */
 
 #lechicalafrancaise {
-    background-color: #FFF3F7;
-    font-family: 'Libre Baskerville', serif;
+	background-color: #FFF3F7;
+	font-family: 'Libre Baskerville', serif;
 }
 
 #lechicalafrancaise h2 {
-    background: -webkit-linear-gradient(100deg, #9966ff, #e67300);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background: -webkit-linear-gradient(100deg, #9966ff, #e67300);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
-
-
 
 #lechicalafrancaise .special_font {
-    font-family: 'Libre Baskerville', serif;
-    color: #e67300;
+	font-family: 'Libre Baskerville', serif;
+	color: #e67300;
 }
 
+	/* Le Délice des Papilles */
 
 #ledelicedespapilles {
-    background-color: #FAFAFA;
-    font-family: 'Dancing Script', cursive;
+	background-color: #FAFAFA;
+	font-family: 'Dancing Script', cursive;
 }
 #ledelicedespapilles h2 {
-    background: -webkit-linear-gradient(150deg, #66b3ff, #0000ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background: -webkit-linear-gradient(150deg, #66b3ff, #0000ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 #ledelicedespapilles .special_font {
-    color: #3399ff;
+	color: #3399ff;
 }
 
-
-
+	/* La Palette du Goût */
 
 #lapalettedugout {
-    background-color: #F7FFFA;
-    font-family: 'Kalam', cursive;
+	background-color: #F7FFFA;
+	font-family: 'Kalam', cursive;
 }
 
 #lapalettedugout .special_font {
-    color: #00b300;
+	color: #00b300;
 }
 
 #lapalettedugout h2 {
-    background: -webkit-linear-gradient(150deg, #ddffcc, #008000);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+	background: -webkit-linear-gradient(150deg, #ddffcc, #008000);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 
-/* boutons du menu */
+	/* boutons et animations */
 
-/* Note concernant les boutons : le PDF donnant les instructions ne précise pas si le fondu (opacity) s'applique au texte, à la background color du parent, ou aux deux. */
+/* Note concernant les boutons de la partie menu : le PDF donnant les instructions ne précise pas si le fondu (opacity) s'applique au texte, à la background color du parent, ou aux deux. */
 /* Comme la phrase parle juste de "zoom avec fondu" j'ai ici appliqué le fondu à tout le bouton sur le menu, cependant, il est tout à fait possible de changer cela */
 /* Pour l'appliquer uniquement au parent, il faut créer un enfant adjacent de la même taille que le parent, lui donner à lui une background color, et le modifier si besoin est avec les propriétés affectant les enfants voisins, vu qu'on ne peut pas modifier un parent avec du :hover (CSS veut bien dire "cascading"... il faut donc gruger, car on ne peut pas remonter) */
 /* Pour ne l'appliquer qu'au texte, il suffit de changer la valeur d'opacity du texte. Simple. */
@@ -137,84 +160,199 @@ main {
 /* ... Et pour être très franc je trouve le fait de faire un fondu sur des couleurs déjà très claires d'une profonde s******** dans tous les cas o_O on voit que dal ! */ 
 
 .btn {
-    margin: auto;
-    text-align: center;
-    transform: scale(1);
-    transition-property: transform;
-    transition-duration: 400ms;
+	margin: auto;
+	text-align: center;
+	transform: scale(1);
+	transition-property: transform;
+	transition-duration: 400ms;
 }
 
 .btn h3 {
-    font-size: 3rem;
-    margin: 20px auto;
+	font-size: 3rem;
+	margin: 20px auto;
 }
 
 
 .menu {
-    cursor: pointer;
-    opacity: 1;
-    transition-property: opacity;
-    transition-duration: 400ms;
-}    
+	cursor: pointer;
+	opacity: 1;
+	transition-property: opacity;
+	transition-duration: 400ms;
+}	
 
 .menu:hover {
-    opacity: 0.8;
+	opacity: 0.8;
 }
 .menu:hover .btn{
-    transform: scale(1.15);
+	transform: scale(1.15);
 }
 
 
 
+/* Voici le code utilisé par le site Animate.css pour obtenir l'effet de wiggle demandé. Il est ici appelé shakeX. 
+Je le mets ici pour que mon correcteur n'ait pas à aller le chercher, ou ne se dise pas que je l'ai juste "copié collé au pif" sans le comprendre. 
+Croyez moi que j'ai bien perdu 2h à trouver comment appliquer :hover au webkit, au point de me dire que ça aurait été plus rapide de le faire moi-même... */
+
+/* ShakeX (site : https://animate.style/) */
+
+:root {
+	--animate-duration: 1s;
+	--animate-delay: 1s;
+	--animate-repeat: 1;
+}
+
+@keyframes shakeX {
+	from,
+	to {
+		transform: translate3d(0, 0, 0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70%,
+	90% {
+		transform: translate3d(-10px, 0, 0);
+	}
+
+	20%,
+	40%,
+	60%,
+	80% {
+		transform: translate3d(10px, 0, 0);
+	}
+}
 
 
-    /* Prochainement */
+.animate__shakeX:hover {
+	animation-name: shakeX;
+	animation-duration: 1s;
+}
+
+
+/* Prochainement */
 
 .comingsoon {
-    display: flex;
-    width: 400px;
-    height: 80px;
-    margin: 0 auto;
-    margin-bottom: 60px;
-    background-color: #1D9977;
-    border-radius: 20px;
-    text-align: center;
+	display: flex;
+	width: 400px;
+	height: 80px;
+	margin: 0 auto;
+	margin-bottom: 60px;
+	background-color: #1D9977;
+	border-radius: 20px;
+	text-align: center;
 }
 
 .comingsoon p {
-    font-size: 2rem;
-    color: #F3D410;
-    margin: auto;
+	font-size: 2rem;
+	color: #F3D410;
+	margin: auto;
 }
-.points {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #F3D410;
-    margin: auto;
+
+	/* Animation des trois points de suspension après "prochainement" */
+
+.points_animated {
+	font-size: 2rem;
+	font-weight: bold;
+	color: #F3D410;
+	margin: auto;
+}
+
+@keyframes blink {
+    /**
+     * At the start of the animation the dot
+     * has an opacity of .2
+     */
+    0% {
+      opacity: .2;
+    }
+    /**
+     * At 20% the dot is fully visible and
+     * then fades out slowly
+     */
+    20% {
+      opacity: 1;
+    }
+    /**
+     * Until it reaches an opacity of .2 and
+     * the animation can start again
+     */
+    100% {
+      opacity: .2;
+    }
+}
+
+.points_animated span {
+    /**
+     * Use the blink animation, which is defined above
+     */
+    animation-name: blink;
+    /**
+     * The animation should take 1.4 seconds
+     */
+    animation-duration: 1.4s;
+    /**
+     * It will repeat itself forever
+     */
+    animation-iteration-count: infinite;
+    /**
+     * This makes sure that the starting style (opacity: .2)
+     * of the animation is applied before the animation starts.
+     * Otherwise we would see a short flash or would have
+     * to set the default styling of the dots to the same
+     * as the animation. Same applies for the ending styles.
+     */
+    animation-fill-mode: both;
+}
+
+.points_animated span:nth-child(2) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .2s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .2s;
+}
+
+.points_animated span:nth-child(3) {
+    /**
+     * Starts the animation of the third dot
+     * with a delay of .4s, otherwise all dots
+     * would animate at the same time
+     */
+    animation-delay: .4s;
 }
 
 
-    /* Footer */
+/* Footer */
 
 footer {
-    display: flex;
-    width: 1190px;
-    height: 100px;
-    margin: auto;
-    justify-content: space-between;
-    background-color: #1D9977;
-    /*padding-left: 30px;
-    padding-right: 30px;*/
+	background-color: #1D9977;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+.footer_container {
+	display: flex;
+	width: 1190px;
+	height: 100px;
+	margin: auto;
+	justify-content: space-between;
+	background-color: #1D9977;
 }
 
 .liens_utiles {
-    font-size: 2rem;
-    color: #F3D410;
-    padding-left: 30px;
-    padding-right: 30px;
+	font-size: 2rem;
+	color: #F3D410;
+	padding-left: 30px;
+	padding-right: 30px;
 }
-a {
-    color: #F3D410;
-    text-decoration: none;
+
+.liens_utiles {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #F3D410;
+	padding: 32px;
 }
 

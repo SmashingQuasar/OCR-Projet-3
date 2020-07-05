@@ -1,0 +1,219 @@
+* {
+	flex-basis: auto;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+    font-family: 'Kalam', cursive; /* font par défaut, remplacée si différente */
+	display: flex;
+	flex-direction: column;
+	width: 800px;
+    min-height: calc(100vh - 20px);
+    background-color: #FFD6D6;
+    padding: 70px;
+	margin: auto;
+	margin-bottom: 50px;
+}
+
+/* Header */
+
+header {
+	width: 100%;
+	background-color: #1D9977;
+}
+
+.banner {
+	display: flex;
+	width: 1190px;
+	height: 150px;
+	margin: auto;
+	background-color: #1D9977;
+}
+
+.banner h1 {
+	font-size: 3rem;
+	color: #F3D410;
+	margin: auto;
+}
+
+
+
+/* Footer */
+
+footer {
+    background-color: #1D9977;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer_container {
+    display: flex;
+    width: 1190px;
+    height: 100px;
+    margin: auto;
+    justify-content: space-between;
+    background-color: #1D9977;
+}
+
+.liens_utiles {
+    font-size: 2rem;
+    color: #F3D410;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.liens_utiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F3D410;
+    padding: 32px;
+}
+
+
+/* Nom du restaurant en haut de page, spécifique à chaque menu */
+
+.lanoteenchantee {
+	font-family: 'Lobster Two', cursive;
+	display: flex;
+	flex-direction: column;
+}
+.lanoteenchantee i {
+	font-size: 7rem;
+	background: -webkit-linear-gradient(160deg, #ffa366, #ff3333);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* Magouilles pour créer des barres horizontales de chaque côté de mes titres h2. 
+Peut probablement aussi se faire de manière plus courte avec une background-image non animée comme pour le soulignage 
+(mais j'ai galéré à la positionner de manière responsive comme je le voulais, donc je suis revenu à cette solution) */
+
+h2 {
+	font-size: 1.7rem;
+	text-align: center;
+	margin: auto 30px;
+}
+
+.straight_line {
+	border-top: 3px solid #000; 
+	width : 200px;
+	margin: auto;
+}
+
+.h2 {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+.h2_box {
+	display: flex;
+	flex-direction: column;
+}
+
+
+/*  Animation de soulignement partant du milieu, trouvée sur le net : 12 lignes avec des bidouilles
+
+h2 {
+	position: relative;
+}		
+
+h2::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%) scaleX(0);
+	transform-origin: 50% 50%;
+	width: 100%;
+	height: 3px;
+	background-color: black;
+	transition: transform 250ms;
+}
+
+h2:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+*/
+
+/* Animation pour souligner en partant du milieu, conseillée par mon mentor de Paris : 6 lignes simples et propres
+
+h2 {
+	background-image: linear-gradient(black, black), linear-gradient(black, black);
+	background-repeat: no-repeat;
+	background-position: left 50% bottom, right 50% bottom;
+	background-size: 0 3px, 0 3px;
+	transition: background-size 250ms ease-in-out;
+}
+
+h2:hover {
+	background-size: 100% 3px, 100% 3px;
+}
+*/
+
+/* Souligner les h2 en partant de la gauche */
+
+h2 {
+	background-image: linear-gradient(black, black);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 0 3px;
+	transition: background-size 250ms ease-in-out;
+}
+
+h2:hover {
+	background-size: 100% 3px, 100% 3px;
+}
+
+/* ordonner les plats et leurs prix */
+
+p {
+	font-size: 1.3rem;
+	margin-top: 15px;
+}
+
+.price {
+	float: right;
+	font-weight: bold;
+}
+
+/* afficher le nom du restaurant en bas de page */
+
+#bottom {
+	display: flex;
+	flex-direction: row;
+	margin: 0 auto;
+}
+
+#bottom i{
+	font-size: 3rem;
+	margin: auto 20px;
+}
+#bottom h1{
+	font-size: 3rem;
+}
+
+/* faire en sorte que les liens ne se soulignent pas */
+
+a {
+	text-decoration: none;
+}
