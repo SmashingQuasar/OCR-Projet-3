@@ -16,13 +16,14 @@ main {
     font-family: 'Kalam', cursive; /* font par défaut, remplacée si différente */
 	display: flex;
 	flex-direction: column;
-	width: 800px;
+	width: 100%;
+	max-width: 850px;
     min-height: calc(100vh - 20px);
-    background-color: #FFD6D6;
     padding: 70px;
 	margin: auto;
-	margin-bottom: 50px;
+	margin-bottom: 100px;
 }
+
 
 /* Header */
 
@@ -33,10 +34,10 @@ header {
 
 .banner {
 	display: flex;
-	width: 1190px;
+	width: 500px;
 	height: 150px;
 	margin: auto;
-	background-color: #1D9977;
+	background-color: inherit;
 }
 
 .banner h1 {
@@ -57,8 +58,9 @@ footer {
 }
 
 .footer_container {
-    display: flex;
-    width: 1190px;
+	display: flex;
+	width: 100%;
+    max-width: 1190px;
     height: 100px;
     margin: auto;
     justify-content: space-between;
@@ -66,20 +68,30 @@ footer {
 }
 
 .liens_utiles {
-    font-size: 2rem;
-    color: #F3D410;
-    padding-left: 30px;
-    padding-right: 30px;
+	font-size: 2rem;
+	color: #F3D410;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 32px;
 }
 
-.liens_utiles {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #F3D410;
-    padding: 32px;
-}
 
+/* Background color du main */
+
+.lanoteenchantee--bgc {
+	background-color: #FDE0DC;
+}
+.lapalettedugout--bgc {
+	background-color: #F7FFFA;
+}
+.lechicalafrancaise--bgc {
+	font-family: 'Libre Baskerville', serif;
+	background-color: #FFF5FE;
+}
+.ledelicedespapilles--bgc {
+	background-color: #FAFAFA;
+}
 
 /* Nom du restaurant en haut de page, spécifique à chaque menu */
 
@@ -88,34 +100,48 @@ footer {
 	display: flex;
 	flex-direction: column;
 }
-.lanoteenchantee i {
-	font-size: 7rem;
-	background: -webkit-linear-gradient(160deg, #ffa366, #ff3333);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	text-align: center;
+
+.notedemusique {
+	margin: auto;
 }
 
-h1 {
+i {
+	font-size: 7rem;
+	background: -webkit-linear-gradient(160deg, #F7916A, #F05060);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.lanoteenchantee h1 {
     font-size: 3rem;
     text-align: center;
 }
-
-/* Magouilles pour créer des barres horizontales de chaque côté de mes titres h2. 
-Peut probablement aussi se faire de manière plus courte avec une background-image non animée comme pour le soulignage 
-(mais j'ai galéré à la positionner de manière responsive comme je le voulais, donc je suis revenu à cette solution) */
-
-h2 {
-	font-size: 1.7rem;
+.lapalettedugout h1 {
+    font-size: 4.5rem;
 	text-align: center;
-	margin: auto 30px;
+	background: -webkit-linear-gradient(130deg, #BEFF7F, #008000);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.lechicalafrancaise h1 {
+	font-size: 2.5rem;
+	text-align: center;
+	background: -webkit-linear-gradient(150deg, #8F59FB, #E38A20);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.ledelicedespapilles h1 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 3rem;
+	text-align: center;
+	background: -webkit-linear-gradient(130deg, #66b3ff, #0000ff);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
-.straight_line {
-	border-top: 3px solid #000; 
-	width : 200px;
-	margin: auto;
-}
+
+/* Magouilles pour créer des barres horizontales de chaque côté de mes titres h2 et les souligner
+mais aussi gérer la couleur du texte des plats et des prix */
 
 .h2 {
 	width: 100%;
@@ -128,10 +154,154 @@ h2 {
 .h2_box {
 	display: flex;
 	flex-direction: column;
+	width: auto;
+}
+
+.lanoteenchantee--bgc h2, .lapalettedugout--bgc h2 {
+	font-size: 1.7rem;
+	text-align: center;
+	margin: auto 30px;
+	background-image: linear-gradient(black, black);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 0 3px;
+	transition: background-size 250ms ease-in-out;
+}
+
+.lechicalafrancaise_couleur1 {
+	color: #C6741A;
+}
+.lechicalafrancaise_couleur2 {
+	color: #A56799;
+}
+.lechicalafrancaise_couleur3 {
+	color: #6E4CCC;
+}
+
+.lechicalafrancaise_couleur1 h2 {
+	font-size: 1.2rem;
+	text-align: center;
+	margin: 20px 10px;
+	background-image: linear-gradient(#C6741A, #C6741A);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 0 3px;
+	transition: background-size 250ms ease-in-out;
+}
+.lechicalafrancaise_couleur2 h2 {
+	font-size: 1.2rem;
+	text-align: center;
+	margin: 20px 10px;
+	background-image: linear-gradient(#A56799, #A56799);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 0 3px;
+	transition: background-size 250ms ease-in-out;
+}
+.lechicalafrancaise_couleur3 h2 {
+	font-size: 1.2rem;
+	text-align: center;
+	margin: 20px 10px;
+	background-image: linear-gradient(#6E4CCC, #6E4CCC);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 0 3px;
+	transition: background-size 250ms ease-in-out;
+}
+
+.ledelicedespapilles_couleur1 h2 {
+	font-size: 1.4rem;
+	text-align: center;
+	margin: 20px 10px;
+	background-image: linear-gradient(#0000ff, #0000ff);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 0 3px;
+	transition: background-size 250ms ease-in-out;
+}
+.ledelicedespapilles_couleur2 h2 {
+	font-size: 1.4rem;
+	text-align: center;
+	margin: 20px 10px;
+	background-image: linear-gradient(#0670F3, #0670F3);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 0 3px;
+	transition: background-size 250ms ease-in-out;
+}
+.ledelicedespapilles_couleur3 h2 {
+	font-size: 1.4rem;
+	text-align: center;
+	margin: 20px 10px;
+	background-image: linear-gradient(#66b3ff, #66b3ff);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 0 3px;
+	transition: background-size 250ms ease-in-out;
+}
+
+/* Souligner les h2 en partant de la gauche */
+
+.lanoteenchantee--bgc h2:hover, .lechicalafrancaise--bgc h2:hover, .lapalettedugout--bgc h2:hover, .ledelicedespapilles--bgc h2:hover {
+	background-size: 100% 3px;
+}
+
+/* Faire des lignes horizontales autour des titres */
+
+.straight_line_lanoteenchantee {
+	border-top: 3px solid #000; 
+	width : 225px;
+	margin: auto;
+}
+.lechicalafrancaise_couleur1 .straight_line_lechicalafrancaise {
+	border-top: 3px solid #C6741A; 
+	width : 215px;
+	margin: auto;
+}
+.lechicalafrancaise_couleur2 .straight_line_lechicalafrancaise {
+	border-top: 3px solid #A56799; 
+	width : 215px;
+	margin: auto;
+}
+.lechicalafrancaise_couleur3 .straight_line_lechicalafrancaise {
+	border-top: 3px solid #6E4CCC; 
+	width : 215px;
+	margin: auto;
+}
+
+.ledelicedespapilles_couleur1 .straight_line_ledelicedespapilles {
+	border-top: 3px solid #0000ff; 
+	width : 200px;
+	margin: auto;
+}
+.ledelicedespapilles_couleur2 .straight_line_ledelicedespapilles {
+	border-top: 3px solid #0670F3; 
+	width : 200px;
+	margin: auto;
+}
+.ledelicedespapilles_couleur3 .straight_line_ledelicedespapilles {
+	border-top: 3px solid #66b3ff; 
+	width : 200px;
+	margin: auto;
 }
 
 
-/*  Animation de soulignement partant du milieu, trouvée sur le net : 12 lignes avec des bidouilles
+.straight_line_lapalettedugout_left {
+	width: 250px;
+	margin: auto -30px auto -30px;
+	padding: 2px 0;
+	background: linear-gradient(to left, #BEFF7F, #008000);
+}
+
+.straight_line_lapalettedugout_right {
+	width: 250px;
+	margin: auto -30px auto -30px;
+	padding: 2px 0;
+	background: linear-gradient(to right, #BEFF7F, #008000);
+}
+
+
+/*  Examples d'animation de soulignement partant du milieu, trouvée sur le net : 12 lignes avec des bidouilles
 
 h2 {
 	position: relative;
@@ -152,8 +322,7 @@ h2::after {
 
 h2:hover::after {
     transform: translateX(-50%) scaleX(1);
-}
-*/
+}*/
 
 /* Animation pour souligner en partant du milieu, conseillée par mon mentor de Paris : 6 lignes simples et propres
 
@@ -170,30 +339,36 @@ h2:hover {
 }
 */
 
-/* Souligner les h2 en partant de la gauche */
+/* ordonner les plats et leurs prix - responsive */
 
-h2 {
-	background-image: linear-gradient(black, black);
-	background-repeat: no-repeat;
-	background-position: left bottom;
-	background-size: 0 3px;
-	transition: background-size 250ms ease-in-out;
-}
-
-h2:hover {
-	background-size: 100% 3px, 100% 3px;
-}
-
-/* ordonner les plats et leurs prix */
-
-p {
+.lanoteenchantee--bgc p, .lapalettedugout--bgc p {
 	font-size: 1.3rem;
 	margin-top: 15px;
 }
+.lechicalafrancaise--bgc p {
+	font-size: 1rem;
+	margin-top: 15px;
+}
+.ledelicedespapilles--bgc p {
+	font-size: 1.2rem;
+	margin-top: 15px;
+}
+
+.lanoteenchantee--bgc .dish {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.lapalettedugout--bgc .dish, .ledelicedespapilles--bgc .dish, .lechicalafrancaise--bgc .dish {
+	display: flex;
+	flex-direction: row;
+	padding: 0 45px 0 45px;
+	justify-content: space-between;
+}
 
 .price {
-	float: right;
 	font-weight: bold;
+	margin: auto 0 auto 30px;
 }
 
 /* afficher le nom du restaurant en bas de page */
@@ -207,6 +382,7 @@ p {
 #bottom i{
 	font-size: 3rem;
 	margin: auto 20px;
+
 }
 #bottom h1{
 	font-size: 3rem;
@@ -216,4 +392,21 @@ p {
 
 a {
 	text-decoration: none;
+	color: inherit;
+}
+
+/*     RESPONSIVE     */
+
+@media screen and (max-width: 850px) {
+
+	main {
+		padding: 35px;
+	}
+	.h2_box {
+		display: none;
+	}
+	
+	h2, .lechicalafrancaise_couleur1 h2, .lechicalafrancaise_couleur2 h2, .lechicalafrancaise_couleur3 h2, .lanoteenchantee--bgc h2, .lapalettedugout--bgc h2, .ledelicedespapilles--bgc h2 {
+		margin: auto;
+	}
 }

@@ -26,7 +26,8 @@ body {
 main {
 	display: flex;
 	flex-direction: column;
-	width: 1190px;
+	width: 100%;
+	max-width: 1190px;
 	margin: auto;
 	margin-bottom: 100px;
 	min-height: calc(100vh - 20px);
@@ -41,7 +42,7 @@ header {
 
 .banner {
 	display: flex;
-	width: 1190px;
+	width: 500px;
 	height: 150px;
 	margin: auto;
 	background-color: #1D9977;
@@ -54,10 +55,6 @@ header {
 }
 
 /* Structure de la présentation des menus */
-
-.container_menus {
-
-}
 
 .liste_menus {
 	display: flex;
@@ -89,12 +86,12 @@ header {
 	/* La Note Enchantée */
 
 #lanoteenchantee {
-	background-color: #FFD6D6;
+	background-color: #FDE0DC;
 	font-family: 'Lobster Two', cursive;
 }
 #lanoteenchantee i {
 	font-size: 3rem;
-	background: -webkit-linear-gradient(160deg, #ffa366, #ff3333);
+	background: -webkit-linear-gradient(160deg, #F7916A, #F05060);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -102,19 +99,19 @@ header {
 	/* Le Chic à la Française */
 
 #lechicalafrancaise {
-	background-color: #FFF3F7;
+	background-color: #FFF5FE;
 	font-family: 'Libre Baskerville', serif;
 }
 
 #lechicalafrancaise h2 {
-	background: -webkit-linear-gradient(100deg, #9966ff, #e67300);
+	background: -webkit-linear-gradient(100deg, #8F59FB, #E38A20);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
 #lechicalafrancaise .special_font {
 	font-family: 'Libre Baskerville', serif;
-	color: #e67300;
+	color: #C7741A;
 }
 
 	/* Le Délice des Papilles */
@@ -144,7 +141,7 @@ header {
 }
 
 #lapalettedugout h2 {
-	background: -webkit-linear-gradient(150deg, #ddffcc, #008000);
+	background: -webkit-linear-gradient(150deg, #BEFF7F, #008000);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -335,7 +332,8 @@ footer {
 }
 .footer_container {
 	display: flex;
-	width: 1190px;
+	width: 100%;
+    max-width: 1190px;
 	height: 100px;
 	margin: auto;
 	justify-content: space-between;
@@ -345,15 +343,19 @@ footer {
 .liens_utiles {
 	font-size: 2rem;
 	color: #F3D410;
-	padding-left: 30px;
-	padding-right: 30px;
-}
-
-.liens_utiles {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #F3D410;
 	padding: 32px;
 }
 
+/*     RESPONSIVE     */
+
+@media screen and (max-width: 1000px) {
+
+	.liste_menus {
+		width: 100%;
+		max-width: 1000;
+		flex-direction: column;
+	}
+}
