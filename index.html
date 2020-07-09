@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/> -->
@@ -30,29 +31,26 @@
 <body>
 
     <header> 
-        <a href="./index.html">
-            <div class="banner">
-                <h1>OhMyFood</h1>
-            </div>
+        <a href="/">
+            <h1>OhMyFood</h1>
         </a>
     </header>
     
     <main>
 
-        <div class="liste_menus">
-            <a href="./menus/menu_lanoteenchantee.html"> 
-                <div class="menu" id="lanoteenchantee">
-                    <div class="btn">
-                        <div class="notedemusique"> 
-                            <i class="fas fa-music"></i>
-                        </div>
-                        <h2>La note enchantée</h2>
-                        <h3 class="special_font">MENU</h3>
-                        <div class="btn__bg"></div>
+        <menu-card class="orange">
+            <a href="./menus/menu_lanoteenchantee.html">
+                <card-content>
+                    <div class="notedemusique"> 
+                        <i class="fas fa-music"></i>
                     </div>
-                </div>
+                    <h2>La note enchantée</h2>
+                    <h3 class="special_font">MENU</h3>
+                </card-content>
             </a>
+        </menu-card>
 
+        <menu-card>
             <a href="./menus/menu_lechicalafrancaise.html"> 
                 <div class="menu" id="lechicalafrancaise">
                     <div class="btn">
@@ -62,7 +60,9 @@
                     </div>
                 </div>
             </a>
+        </menu-card>
 
+        <menu-card>
             <a href="./menus/menu_ledelicedespapilles.html">
                 <div class="menu" id="ledelicedespapilles">
                     <div class="btn">
@@ -71,7 +71,9 @@
                     </div>
                 </div>
             </a>
+        </menu-card>
 
+        <menu-card>
             <a href="./menus/menu_lapalettedugout.html"> 
                 <div class="menu" id="lapalettedugout">
                     <div class="btn">
@@ -79,9 +81,8 @@
                         <h3 class="special_font">Menu</h3>
                     </div>
                 </div>
-            </a>    
-        </div>
-
+            </a>
+        </menu-card>
 
         <div class="comingsoon">
             <p>Prochainement <span class="points_animated"><span>.</span><span>.</span><span>.</span></span></p>

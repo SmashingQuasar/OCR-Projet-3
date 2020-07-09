@@ -1,22 +1,9 @@
-/* Petit reset css pour éviter quelques problèmes par la suite */
-
-* {
-	flex-basis: auto;
-	box-sizing: border-box;
-}
-
-/* Pour que les liens ne soient pas bleux et soulignés */
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
 /* Propriétés des body et main */
 
 body {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	font-family: 'Roboto', sans-serif;
 	min-height: 100vh;
 	margin: 0;
@@ -25,38 +12,61 @@ body {
 
 main {
 	display: flex;
-	flex-direction: column;
-	width: 100%;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100vw;
 	max-width: 1190px;
-	margin: auto;
 	margin-bottom: 100px;
-	min-height: calc(100vh - 20px);
+	padding-top: 25px;
+}
+
+@media (max-width: 1000px)
+{
+	main {
+		align-items: center;
+	}
 }
 
 /* Header */
 
 header {
-	width: 100%;
+	width: 100vw;
 	background-color: #1D9977;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 150px;
 }
 
-.banner {
+/* .banner {
 	display: flex;
 	width: 500px;
 	height: 150px;
 	margin: auto;
 	background-color: #1D9977;
-}
+} */
 
-.banner h1 {
-	font-size: 3rem;
+h1 {
+	font-size: 48px;
+	font-weight: bold;
 	color: #F3D410;
 	margin: auto;
 }
 
+h2 {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 48px;
+	font-weight: bold;
+}
+
 /* Structure de la présentation des menus */
 
-.liste_menus {
+/* .liste_menus {
 	display: flex;
 	width: 1000px;
 	flex-direction: row;
@@ -64,6 +74,71 @@ header {
 	margin: 0 auto;
 	padding-top: 25px;
 	padding-bottom: 25px;
+} */
+
+menu-card {
+	display: flex;
+	margin: 35px;
+	/* display: flex;
+	justify-content: space-evenly; */
+	width: 425px;
+	height: 600px;
+	box-shadow: 1px 1px 20px #BDC3C7;
+}
+
+menu-card a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+menu-card card-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	opacity: 1;
+	transform: scale(1);
+	transition-property: opacity, transform;
+	transition-duration: 400ms, 400ms;
+	/* margin: auto; */
+	/* text-align: center; */
+}
+
+menu-card card-content:hover {
+	opacity: 0.8;
+}
+menu-card card-content:hover {
+	transform: scale(1.15);
+}
+
+
+menu-card.orange {
+	background-color: #FDE0DC;
+	font-family: 'Lobster Two', cursive;
+}
+menu-card.orange i {
+	width: 48px;
+	height: 48px;
+	font-size: 3rem;
+	background: -webkit-linear-gradient(160deg, #F7916A, #F05060);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+menu-card.pink {
+	background-color: #FFF5FE;
+	font-family: 'Libre Baskerville', serif;
+}
+menu-card.pink h2 {
+	background: -webkit-linear-gradient(100deg, #8F59FB, #E38A20);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .menu {
@@ -71,7 +146,6 @@ header {
 	justify-content: space-evenly;
 	width: 425px;
 	height: 600px;
-	margin: 35px;
 	box-shadow: 1px 1px 20px #BDC3C7;
 }
 
@@ -85,16 +159,18 @@ header {
 
 	/* La Note Enchantée */
 
-#lanoteenchantee {
+
+
+/* #lanoteenchantee {
 	background-color: #FDE0DC;
 	font-family: 'Lobster Two', cursive;
-}
-#lanoteenchantee i {
+} */
+/* #lanoteenchantee i {
 	font-size: 3rem;
 	background: -webkit-linear-gradient(160deg, #F7916A, #F05060);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-}
+} */
 
 	/* Le Chic à la Française */
 
@@ -166,7 +242,7 @@ header {
 }
 
 .btn h3 {
-	font-size: 3rem;
+	/* font-size: 3rem; */
 	margin: 20px auto;
 }
 
